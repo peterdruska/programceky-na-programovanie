@@ -14,6 +14,8 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     public static final String KEY = "KEY";
+    EditText editText;
+    String messageText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +31,14 @@ public class MainActivity extends AppCompatActivity {
                 sendMessage();
             }
         });
+
+        editText = (EditText) findViewById(R.id.message);
     }
 
     /** Called when the user taps the Send button */
     public void sendMessage() {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        EditText editText = (EditText) findViewById(R.id.message);
-        String messageText = editText.getText().toString();
+        messageText = editText.getText().toString();
         intent.putExtra(KEY, messageText);
         startActivity(intent);
     }
