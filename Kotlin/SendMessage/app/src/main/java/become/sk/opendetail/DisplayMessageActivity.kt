@@ -8,16 +8,18 @@ import android.widget.TextView
 class DisplayMessageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // 1
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_display_message)
 
+        // 2
         title = "Správa"
 
-        // Get the Intent that started this activity and extract the string
+        // 3
         val intent = intent
         val message = intent.getStringExtra(MainActivity.KEY)
 
-        // Capture the layout's TextView and set the string as its text
+        // 4
         val textView = findViewById(R.id.textView) as TextView
         textView.text = message
     }

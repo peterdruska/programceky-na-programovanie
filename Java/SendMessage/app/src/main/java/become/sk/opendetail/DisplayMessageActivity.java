@@ -9,16 +9,18 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // 1
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
 
+        // 2
         setTitle("Správa");
 
-        // Get the Intent that started this activity and extract the string
+        // 3
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.KEY);
 
-        // Capture the layout's TextView and set the string as its text
+        // 4
         TextView textView = (TextView) findViewById(R.id.textView);
         textView.setText(message);
     }
