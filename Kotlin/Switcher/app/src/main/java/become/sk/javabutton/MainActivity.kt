@@ -16,6 +16,7 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
 
     internal var toggleTitle: Boolean? = false
+    var textView: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,16 +25,17 @@ class MainActivity : AppCompatActivity() {
 
         val button = findViewById(R.id.buttonX) as Button
         button.setOnClickListener { prepni() }
+
+        textView = findViewById(R.id.textViewX) as TextView
     }
 
     protected fun prepni() {
-        val textView = findViewById(R.id.textViewX) as TextView
         if (toggleTitle!!) {
             toggleTitle = false
-            textView.text = "Vyplo mi"
+            textView!!.text = "Vyplo mi"
         } else {
             toggleTitle = true
-            textView.text = "Zaplo mi"
+            textView!!.text = "Zaplo mi"
         }
     }
 }

@@ -16,6 +16,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     Boolean toggleTitle = false;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
                 prepni();
             }
         });
+
+        textView = (TextView) findViewById(R.id.textViewX);
     }
 
     protected void prepni() {
-        TextView textView = (TextView) findViewById(R.id.textViewX);
         if (toggleTitle) {
             toggleTitle = false;
             textView.setText("Vyplo mi");
