@@ -13,7 +13,7 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE = "TEST_MESSAGE";
+    public static final String KEY = "KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         EditText editText = (EditText) findViewById(R.id.message);
         String messageText = editText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, messageText);
+        intent.putExtra(KEY, messageText);
         startActivity(intent);
     }
 }
