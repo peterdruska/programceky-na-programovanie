@@ -17,14 +17,15 @@ class MainActivity : AppCompatActivity() {
 
     internal var toggleTitle: Boolean? = false
     var textView: TextView? = null
+    var button: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         title = "Prepínač"
 
-        val button = findViewById(R.id.buttonX) as Button
-        button.setOnClickListener { prepni() }
+        button = findViewById(R.id.buttonX) as Button
+        button!!.setOnClickListener { prepni() }
 
         textView = findViewById(R.id.textViewX) as TextView
     }

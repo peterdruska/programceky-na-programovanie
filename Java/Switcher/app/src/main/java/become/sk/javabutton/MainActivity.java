@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     Boolean toggleTitle = false;
     TextView textView;
+    Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("Prepínač");
 
-        Button button = (Button) findViewById(R.id.buttonX);
+        button = (Button) findViewById(R.id.buttonX);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
